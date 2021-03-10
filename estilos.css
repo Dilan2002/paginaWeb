@@ -1,0 +1,308 @@
+:root{
+    --primary-color: #f2c610;
+    --secundary-color: #48b0b0;
+}
+
+html{
+    font-size: 62.5%;    
+    scroll-snap-type: y mandatory   ;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+    font-family: 'DotGothic16', sans-serif;
+    font-family: 'Rubik', sans-serif;   
+}
+
+body{
+    background-image: linear-gradient(to top, #DFE9F3 0%, #fff 100%);
+}
+
+h1{
+    font-size: 3.2rem !important;
+}
+h2{
+    font-size: 2.5rem !important;
+}
+h3{
+    font-size: 2rem !important;
+}
+h1,h2,h3{
+    text-align: center;
+}
+
+/* SCROLL SNAP */
+.servicios, nav, .contacto{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+/* HEADER */
+
+header h1{    
+    text-align: center;
+    padding: 1rem 0;        
+    font-weight: 400;    
+}
+
+header nav{
+    background: var(--secundary-color);
+    padding:0;                    
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: column;        
+}
+
+header nav a{
+    color: #fff;
+    font-size: 2.5rem;
+    text-decoration: none;    
+    padding: 1rem 3rem;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    transition: all ease-in .2s;
+}
+
+header nav a:hover{
+    background: #1d7b7b ;                    
+}
+
+@media (min-width: 768px) {
+    header nav ul{
+        flex-direction: row;              
+        justify-content: space-around;
+    }    
+  }
+
+/* FIN HEADER */
+
+/* SECCION DISEÑO DESARROLLO*/
+
+.hero{
+    background-image: url("../imagenes/hero.jpg");        
+    background-size:cover;
+    height: 450px;    
+    position: relative;    
+}
+
+.contenido-hero{    
+    position: absolute;    
+    background: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: #fff;
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+.ubicacion p{    
+    font-size: 16px;
+}
+
+.contenido-hero a{
+    display: inline-block;
+    margin-top: 3rem;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    background-color: var(--secundary-color);
+    padding: 5px 20px;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all ease-in .1s;    
+    text-align: center;
+}
+
+.contenido-hero a:hover{
+    background-color: #1d7b7b;    
+}
+.contenido-hero a:active{
+     transform: scale(0.9);
+}
+
+@media (max-width: 768px) {
+    .contenido-hero a{
+        width: 80%;
+    }
+ }
+
+/* FIN SECCION DISEÑO DESARROLLO*/
+
+/* INICIO MAIN */
+
+.contenedor-main{
+    max-width: 120rem;
+    margin: auto;
+    margin-top: 5rem;
+    background-color: #fff;
+    padding: 20px;
+    -webkit-box-shadow: -3px 0px 20px -1px rgba(0,0,0,0.31);
+    -moz-box-shadow: -3px 0px 20px -1px rgba(0,0,0,0.31);
+    box-shadow: -3px 0px 20px -1px rgba(0,0,0,0.31);
+}
+
+
+.servicios{
+    margin-top: 5rem;
+    display: grid;
+    /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-columns: repeat(3, 1fr);    
+    column-gap: 5rem;    
+}
+
+@media (max-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: 100%;        
+    }
+ }
+
+ .servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;        
+ }
+ .servicio h3{
+    color: var(--secundary-color);
+    font-weight: 500;
+ }
+ .servicio p{
+     font-size: 1.6rem;
+     text-align: center;
+     line-height: 2;     
+ }
+ .servicio .iconos{
+    background-color: var(--primary-color);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;    
+    margin: 2rem 0;    
+ }
+
+/* FIN MAIN*/
+
+/*FORMULARIO INICIO */
+
+.contacto{
+    margin-top: 2rem;
+}
+
+.contacto h2{
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+}
+
+.formulario{    
+    max-width: 700px;
+    min-width: 150px;
+    margin: 0 auto;
+    padding: 20px; 
+    background-color:  #fafafa;
+    -webkit-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.12);
+    box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.12);
+}
+
+.formulario p{
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color: var(--secundary-color);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+
+@media (min-width: 760px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;      
+        column-gap: 2rem;  
+    }    
+
+    .contenedor-campos .campo:nth-child(3),
+    .contenedor-campos .campo:nth-child(4),
+    .contenedor-campos .btn-enviar:nth-child(5){
+        grid-column:1 / 3;
+    }
+ }
+
+.contenedor-campos .campo label{
+    display: block;
+    font-size: 1.6rem;
+}
+
+.formulario .contenedor-campos .campo input,
+.formulario .contenedor-campos .campo textarea{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 2rem;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    transition: all ease-in-out .2s;
+}
+
+.formulario .contenedor-campos .campo input:focus,
+.formulario .contenedor-campos .campo textarea:focus{
+    border-bottom: 1px solid rgba( 72, 176, 176 );
+    transform: scale(0.97);
+}
+
+.contenedor-campos .btn-enviar{        
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contenedor-campos .btn-enviar input[type="submit"]{    
+    border: none;    
+    margin-top: 3rem;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: var(--secundary-color);
+    padding: 5px 20px;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all ease-in .1s; 
+    cursor: pointer;    
+}
+
+.contenedor-campos .btn-enviar input[type="submit"]:hover{
+    background-color: #1d7b7b;
+}
+
+.contenedor-campos .btn-enviar input[type="submit"]:active{
+     transform: scale(0.9);
+}
+
+@media (max-width: 768px) {
+    .contenedor-campos .btn-enviar input[type="submit"]{
+        width: 100%;
+    }
+ }
+/* FORMULARIO FIN */ 
